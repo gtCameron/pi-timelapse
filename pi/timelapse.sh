@@ -2,7 +2,8 @@
 
 date=$(date +'%Y-%m-%d_%T')
 fname=capture_$date.jpg
-bucketname=$(<./.sitename)
+dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+bucketname=$(<$dir/.sitename)
 
 raspistill -vf -hf -o $fname
 
