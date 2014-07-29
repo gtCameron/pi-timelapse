@@ -20,7 +20,7 @@ else
 	echo $1 > .sitename
 
 	command="./$dir/timelapse.sh"
-	job="0,30 * * * * $command"
+	job="0,1 * * * * $command"
 	cat <(fgrep -i -v "$command" <(crontab -l)) <(echo "$job") | crontab -
 
 fi
