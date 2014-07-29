@@ -2,7 +2,7 @@
 
 date=$(date +'%Y-%m-%d_%T')
 fname=capture_$date.jpg
-bucketname=$(<.sitename)
+bucketname=$(<./.sitename)
 
 raspistill -vf -hf -o $fname
 
